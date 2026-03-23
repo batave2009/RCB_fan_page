@@ -104,13 +104,14 @@
             box-shadow: 0px 0px 18px #ffcc00;
             transform: scale(1.08);
         }
-video{
-    position:fixed;
-    right:0;
-    bottom:0;
-    min-width:100%;
-    min-height:100%;
-    z-index:-1;
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;      /* Full width */
+    height: 100vh;     /* Full height */
+    object-fit: cover; /* Prevent stretch */
+    z-index: -1;       /* Send to background */
 }
 
 .content{
@@ -120,11 +121,12 @@ video{
     font-size:40px;
 }
     </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-<video autoplay muted loop class="bg-video">
+<video autoplay muted loop playsinline class="bg-video">
   <source src="videos/virat_sign.mp4" type="video/mp4">
 </video>
 
